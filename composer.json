@@ -1,5 +1,5 @@
 {
-	"name": "larodel",
+	"name": "larodel/cms",
 	"description": "Implementing a Like system for Laravel's wordpress cms.",
 	"license": "MIT",
 	"keywords": ["Laravel",  "Laravel-cms", "Laravel Cms"],
