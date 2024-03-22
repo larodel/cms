@@ -1,6 +1,7 @@
 {
 	"name": "larodel/cms",
 	"description": "Implementing a Like system for Laravel's wordpress cms.",
+	"version": "1.0.0",
 	"license": "MIT",
 	"keywords": ["Laravel",  "Laravel-cms", "Laravel Cms"],
 	"authors": [
