@@ -11,7 +11,8 @@
 		    "role": "Developer"
 		}
 	],
-        "minimum-stability": "stable",
+	 "minimum-stability": "stable",
+         "prefer-stable": true,
 	"homepage": "https://github.com/larodel/cms",
 	"require": {
 		 "php": "^8.2"
