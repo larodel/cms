@@ -1,0 +1,33 @@
+{
+	"name": "larodel",
+	"description": "Implementing a Like system for Laravel's wordpress cms.",
+	"license": "MIT",
+	"keywords": ["Laravel",  "Laravel-cms", "Laravel Cms"],
+	"authors": [
+		{
+		    "name": "Hadi Dehdari",
+		    "email": "hadi.dehdari@gmail.com"
+		}
+	],
+	"minimum-stability": "dev",
+	"require": {
+		"php": ">=5.5.0",
+		"illuminate/database": ">=5.0",
+		"illuminate/support": ">=5.0"    
+	},
+	"autoload": {
+		"psr-4": {
+			"Larodel\\Admin\\": "src/admin",
+			"Larodel\\": "src/",
+		}
+	},
+
+	"extra": {
+		 "laravel": {
+			"providers": [
+				"Larodel\\Admin\\LarodelServiceProvider"
+			]
+		}
+	}
+
+}
