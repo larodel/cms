@@ -27,7 +27,8 @@
 	"extra": {
 		 "laravel": {
 			"providers": [
-				"Larodel\\Admin\\LarodelServiceProvider"
+				"Larodel\\LarodelServiceProvider",
+				"Larodel\\Cms\\AdminServiceProvider"
 			]
 		}
 	}
