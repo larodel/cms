@@ -1,6 +1,6 @@
 <?php
 
-namespace Larodel\Console\Commands;
+namespace Larodel\Cms\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\File;
