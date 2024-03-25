@@ -13,7 +13,7 @@ class LarodelServiceProvider extends BaseServiceProvider
 {
     public function register()
     {
-        $this->:createCommands();
+        $this->createCommands();
     }
 
     public function boot()
