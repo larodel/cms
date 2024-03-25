@@ -19,16 +19,15 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"Larodel\\Cms\\": "src/admin",
-			"Larodel\\": "src/"
+			"Larodel\\Cms\\": "src/"
 		}
 	},
 
 	"extra": {
 		 "laravel": {
 			"providers": [
-				"Larodel\\LarodelServiceProvider",
-				"Larodel\\Cms\\AdminServiceProvider"
+				"Larodel\\Cms\\LarodelServiceProvider",
+				
 			]
 		}
 	}
