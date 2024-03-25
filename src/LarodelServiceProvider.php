@@ -1,22 +1,53 @@
 <?php
 
-use Illuminate\Support\ServiceProvider as BaseServiceProvider;
-use Larodel\Cms\Console\Commands\PluginGetAllCommand;
-use Larodel\Cms\Console\Commands\CreatePluginCommand;
+namespace Larodel;
 
-class ServiceProvider extends BaseServiceProvider
+use Illuminate\Support\ServiceProvider as BaseServiceProvider;
+use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Artisan;
+use Larodel\Console\Commands\PluginGetAllCommand;
+use Larodel\Console\Commands\CreatePluginCommand;
+
+class LarodelServiceProvider extends BaseServiceProvider
 {
     public function register()
     {
-        // Registering package commands
-        $this->commands([
-            PluginGetAllCommand::class,
-            CreatePluginCommand::class,
-        ]);
+        $this->:createCommands();
     }
 
     public function boot()
     {
-        // Bootstrap code here
+        $this->:publishFiles();
+		$this->registerRoutes();
+    }
+	
+	
+	
+	//--------------------------------------------
+	
+	 public  function createCommands()
+    {
+		$this->commands([
+            PluginGetAllCommand::class,
+            CreatePluginCommand::class,
+        ]);	
+	}
+	 public  function publishFiles()
+    {
+        $this->publishes([
+            __DIR__.'/config/cms.php' => config_path('cms.php'),
+        ], 'larodel-config');
+
+       Artisan::call('vendor:publish', ['--tag' => 'larodel-files']);
+    }
+	 private function registerRoutes()
+    {
+        Route::group([
+            'namespace' => 'Larodel\Http\Controllers',
+            'prefix' => '',
+        ], function () {
+            $this->loadRoutesFrom(__DIR__.'/routes/web.php');
+        });
     }
 }
