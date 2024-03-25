@@ -1,13 +1,13 @@
 <?php
 
-namespace Larodel;
+namespace Larodel\Cms;
 
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
-use Larodel\Console\Commands\PluginGetAllCommand;
-use Larodel\Console\Commands\CreatePluginCommand;
+use Larodel\Cms\Console\Commands\PluginGetAllCommand;
+use Larodel\Cms\Console\Commands\CreatePluginCommand;
 
 class LarodelServiceProvider extends BaseServiceProvider
 {
