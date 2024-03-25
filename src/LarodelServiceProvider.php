@@ -18,7 +18,7 @@ class LarodelServiceProvider extends BaseServiceProvider
 
     public function boot()
     {
-        $this->:publishFiles();
+        $this->publishFiles();
 		$this->registerRoutes();
     }
 	
