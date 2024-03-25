@@ -1,35 +1,33 @@
 {
-	"name": "larodel/cms",
-	"description": "Implementing a Like system for Laravel's wordpress cms.",
-	"version": "1.0.0",
-	"license": "MIT",
-	"keywords": ["Laravel",  "Laravel-cms", "Laravel Cms"],
-	"authors": [
-		{
-		    "name": "Hadi Dehdari",
-		    "email": "hadi.dehdari@gmail.com",
-		    "role": "Developer"
-		}
-	],
-	 "minimum-stability": "stable",
-         "prefer-stable": true,
-	"homepage": "https://github.com/larodel/cms",
-	"require": {
-		 "php": "^8.2"
-	},
-	"autoload": {
-		"psr-4": {
-			"Larodel\\Cms\\": "src/"
-		}
-	},
-
-	"extra": {
-		 "laravel": {
-			"providers": [
-				"Larodel\\Cms\\LarodelServiceProvider"
-				
-			]
-		}
-	}
-
+    "name": "larodel/cms",
+    "description": "Implementing a Like system for Laravel's wordpress cms.",
+    "version": "1.0.0",
+    "license": "MIT",
+    "keywords": ["Laravel",  "Laravel-cms", "Laravel Cms"],
+    "authors": [
+        {
+            "name": "Hadi Dehdari",
+            "email": "hadi.dehdari@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "homepage": "https://github.com/larodel/cms",
+    "require": {
+        "php": "^8.2",
+        "larodel/assets": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Larodel\\Cms\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Larodel\\Cms\\LarodelServiceProvider"
+            ]
+        }
+    }
 }
